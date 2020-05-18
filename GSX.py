@@ -8,7 +8,7 @@ path_on_windows = PureWindowsPath(data_folder)
 symbol = "GSX"
 
 # Iterate through directory to get all the Excel files
-excel_files = [file for file in data_folder.iterdir() if file.suffix == ".xlsx"]
+excel_files = [file for file in data_folder.iterdir() if file.suffix == ".xlsx" or file.suffix == ".xlsm"]
 result = []
 
 # Iterate through each individual Excel file and create a pandas dataform from it, clean up the column headers
